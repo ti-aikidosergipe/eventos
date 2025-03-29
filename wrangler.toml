@@ -1,0 +1,16 @@
+name = "eventos"
+main = "./index.html"
+compatibility_date = "2025-03-28"
+
+[site]
+# Diretório onde estão seus arquivos estáticos
+bucket = "./"
+entry-point = "./"
+
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
+
+
+
+
