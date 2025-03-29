@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:; frame-src 'self' https://www.google.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https: data:; frame-src 'self' https://www.google.com;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -49,7 +49,7 @@
     </button>
     <main>
         <section class="hero-container">
-            <div class="hero-content">
+            <div class="hero-content" role="main">
                 <div class="hero-text">
                     <div class="event-details">
                         <div class="event-theme fade-in">
@@ -57,7 +57,7 @@
                             <p>O Encontro Nacional de BUDO Abril 2025 é um evento especial que reúne duas artes marciais tradicionais: o Aikido e o Tenchi Tessen.</p>
                             
                             <h3 class="teachers-title">Professores</h3>
-                            <div class="teachers-carousel">
+                            <div class="teachers-carousel" role="region" aria-label="Carrossel de professores">
                                 <div class="carousel-container">
                                     <div class="carousel-track">
                                         <div class="carousel-slide">
@@ -181,8 +181,8 @@
                 </div>
             </div>
 
-            <div class="hero-image">
-                <h1 class="fade-in hero-title">
+            <div class="hero-image" role="complementary">
+                <h1 class="fade-in hero-title" aria-label="Vigésimo Quinto Encontro Nacional de Budô">
                     <span class="event-number">XXV</span>
                     <span class="event-title">ENCONTRO NACIONAL</span>
                     <span class="event-subtitle">BUDO</span>
