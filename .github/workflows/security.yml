@@ -1,0 +1,19 @@
+name: Security Headers
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Check Security Headers
+        uses: securityheaders/securityheaders.com@v1
+        with:
+          url: ${{ github.event.repository.homepage }}
+          expectedHeaders: "Content-Security-Policy,X-Content-Type-Options,X-Frame-Options,Referrer-Policy,Permissions-Policy" 

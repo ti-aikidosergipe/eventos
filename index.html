@@ -3,15 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrição em Evento</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:; font-src 'self' https: data:; frame-src 'self' https://www.google.com;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), interest-cohort=()">
+    
+    <!-- SEO Meta Tags -->
+    <title>XXV Encontro Nacional de BUDO - Aikido e Tenchi Tessen 2025</title>
+    <meta name="description" content="O Encontro Nacional de BUDO Abril 2025 é um evento especial que reúne duas artes marciais tradicionais: o Aikido e o Tenchi Tessen. Participe do XXV Encontro Nacional de BUDO!">
+    <meta name="keywords" content="aikido, tenchi tessen, artes marciais, budo, encontro nacional, 2025, seminário, workshop">
+    <meta name="author" content="Centro Cultural Georges Stobbaerts">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ccgs-event-basic.vercel.app/">
+    <meta property="og:title" content="XXV Encontro Nacional de BUDO - Aikido e Tenchi Tessen 2025">
+    <meta property="og:description" content="O Encontro Nacional de BUDO Abril 2025 é um evento especial que reúne duas artes marciais tradicionais: o Aikido e o Tenchi Tessen.">
+    <meta property="og:image" content="https://ccgs-event-basic.vercel.app/assets/resources/hero-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ccgs-event-basic.vercel.app/">
+    <meta property="twitter:title" content="XXV Encontro Nacional de BUDO - Aikido e Tenchi Tessen 2025">
+    <meta property="twitter:description" content="O Encontro Nacional de BUDO Abril 2025 é um evento especial que reúne duas artes marciais tradicionais: o Aikido e o Tenchi Tessen.">
+    <meta property="twitter:image" content="https://ccgs-event-basic.vercel.app/assets/resources/hero-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ccgs-event-basic.vercel.app/">
+
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="icon" href="/assets/resources/favicon.png" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
 </head>
 <body>
+    <button id="contrast-toggle" class="contrast-toggle" aria-label="Alternar modo de alto contraste">
+        <i class="fas fa-adjust"></i>
+    </button>
     <main>
         <section class="hero-container">
             <div class="hero-content">
@@ -40,22 +75,30 @@
                                     </div>
                                 </div>
                                 <div class="carousel-indicators">
-                                    <button class="indicator active" data-slide="0"></button>
-                                    <button class="indicator" data-slide="1"></button>
-                                    <button class="indicator" data-slide="2"></button>
+                                    <button class="indicator active" data-slide="0" aria-label="Ir para slide 1: Paulo Roberto Nunes"></button>
+                                    <button class="indicator" data-slide="1" aria-label="Ir para slide 2: Valdenir Guimarães"></button>
+                                    <button class="indicator" data-slide="2" aria-label="Ir para slide 3: Renata Bezerra"></button>
                                 </div>
                             </div>
 
                             <div class="schedule">
                                 <h3 class="schedule-title">Programação</h3>
                                 
-                                <div class="accordion">
+                                <div class="accordion" role="tablist">
                                     <div class="accordion-item">
-                                        <button class="accordion-header">
+                                        <button class="accordion-header" 
+                                                role="tab" 
+                                                aria-selected="false" 
+                                                aria-expanded="false" 
+                                                aria-controls="panel-1">
                                             04 de Abril - Sexta 
-                                            <i class="fas fa-chevron-down"></i>
+                                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
                                         </button>
-                                        <div class="accordion-content">
+                                        <div class="accordion-content" 
+                                             id="panel-1" 
+                                             role="tabpanel" 
+                                             aria-labelledby="tab-1" 
+                                             hidden>
                                             <ul>
                                                 <li>19:30H - Aikido Graduados</li>
                                             </ul>
@@ -63,11 +106,19 @@
                                     </div>
 
                                     <div class="accordion-item">
-                                        <button class="accordion-header">
+                                        <button class="accordion-header" 
+                                                role="tab" 
+                                                aria-selected="false" 
+                                                aria-expanded="false" 
+                                                aria-controls="panel-2">
                                             05 de Abril - Sábado
-                                            <i class="fas fa-chevron-down"></i>
+                                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
                                         </button>
-                                        <div class="accordion-content">
+                                        <div class="accordion-content" 
+                                             id="panel-2" 
+                                             role="tabpanel" 
+                                             aria-labelledby="tab-2" 
+                                             hidden>
                                             <ul>
                                                 <li>09:00H - TENCHI TESSEN</li>
                                                 <li>10:30H - AIKIDO (Abertura Oficial)</li>
@@ -81,11 +132,19 @@
                                     </div>
 
                                     <div class="accordion-item">
-                                        <button class="accordion-header">
+                                        <button class="accordion-header" 
+                                                role="tab" 
+                                                aria-selected="false" 
+                                                aria-expanded="false" 
+                                                aria-controls="panel-3">
                                             06 de Abril - Domingo
-                                            <i class="fas fa-chevron-down"></i>
+                                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
                                         </button>
-                                        <div class="accordion-content">
+                                        <div class="accordion-content" 
+                                             id="panel-3" 
+                                             role="tabpanel" 
+                                             aria-labelledby="tab-3" 
+                                             hidden>
                                             <ul>
                                                 <li>09:00H - TENCHI TESSEN</li>
                                                 <li>10:30H - AIKIDO</li>
@@ -104,7 +163,9 @@
                                 style="border:0;" 
                                 allowfullscreen="" 
                                 loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Mapa mostrando a localização do Centro Cultural Georges Stobbaerts - Dojo Aracaju Aikido"
+                                aria-label="Mapa interativo mostrando a localização do Centro Cultural Georges Stobbaerts - Dojo Aracaju Aikido">
                             </iframe>
                         </div>
 

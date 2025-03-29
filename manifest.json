@@ -1,0 +1,16 @@
+{
+    "name": "XXV Encontro Nacional de BUDO",
+    "short_name": "BUDO 2025",
+    "description": "O Encontro Nacional de BUDO Abril 2025 é um evento especial que reúne duas artes marciais tradicionais: o Aikido e o Tenchi Tessen.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fafafa",
+    "theme_color": "#ff3131",
+    "icons": [
+        {
+            "src": "/assets/resources/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+} 
