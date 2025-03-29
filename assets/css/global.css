@@ -16,6 +16,10 @@
     }
 }
 
+.no-decoration {
+    text-decoration: none;
+}
+
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
