@@ -1,10 +1,10 @@
 name = "eventos"
 compatibility_date = "2025-03-28"
 
-[site]
-# Diretório onde estão seus arquivos estáticos
-bucket = "./"
-entry-point = "./"
+main = "index.html" 
+
+[assets]
+directory = "./assets"
 
 # wrangler.toml (wrangler v3.88.0^)
 [observability.logs]
